@@ -1,0 +1,7 @@
+body {
+    display: grid;
+}
+
+nav {
+    display: flex;
+}
