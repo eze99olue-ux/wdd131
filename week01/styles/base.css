@@ -1,0 +1,321 @@
+:root {
+    --primary-color: #24577d;
+    --nav-color: #333333;
+    --accent-color: #f4a261;
+    --background-color: #ffffff;
+    --card-background: #ffffff;
+    --text-color: #222222;
+    --border-color: #b8b8b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    width: 100%;
+}
+
+#course-title {
+    display: block;
+
+    max-width: 767px;
+    margin: 0 auto;
+
+    padding: 0.8rem;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+
+    text-align: center;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+nav {
+    max-width: 767px;
+    margin: 0 auto;
+
+    display: flex;
+
+    background-color: var(--nav-color);
+}
+
+nav a {
+    flex: 1 1 auto;
+
+    padding: 0.55rem 0.5rem;
+
+    color: white;
+    text-decoration: none;
+
+    text-align: center;
+    font-size: 0.85rem;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--accent-color);
+    color: #000000;
+}
+
+main {
+    width: 90%;
+    max-width: 767px;
+
+    margin: 1.5rem auto 1rem;
+}
+
+h1 {
+    margin-bottom: 1rem;
+
+    color: #222222;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.7rem;
+
+    text-align: center;
+}
+
+/* =========================
+   CARDS
+   ========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 0.4rem;
+}
+
+.card {
+    background-color: var(--card-background);
+
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+
+    overflow: hidden;
+}
+
+.card h2 {
+    padding: 0.5rem;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+
+    text-align: center;
+}
+
+/* =========================
+   ABOUT ME
+   ========================= */
+
+.about-top {
+    display: grid;
+
+    grid-template-columns: 1fr 105px;
+
+    gap: 1rem;
+
+    padding: 0.8rem;
+}
+
+.about-text p {
+    margin-bottom: 0.7rem;
+
+    font-size: 0.75rem;
+    line-height: 1.6;
+}
+
+.profile-image {
+    width: 105px;
+    height: 120px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0 auto;
+}
+
+/* =========================
+   LOCATION
+   ========================= */
+
+.location {
+    padding: 0 0.8rem 0.8rem;
+}
+
+.location h3 {
+    width: 80%;
+
+    margin: 0 auto 0.7rem;
+
+    padding-bottom: 0.3rem;
+
+    border-bottom: 1px solid var(--border-color);
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+
+    text-align: center;
+}
+
+.location-content {
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 0.8rem;
+
+    align-items: start;
+}
+
+.flag-area {
+    text-align: center;
+}
+
+.flag-area img {
+    width: 100px;
+    height: 65px;
+
+    object-fit: cover;
+
+    border: 1px solid #aaaaaa;
+}
+
+.caption {
+    margin-top: 0.4rem;
+
+    font-size: 0.65rem;
+    font-style: italic;
+
+    line-height: 1.4;
+}
+
+.location-text p {
+    margin-bottom: 0.6rem;
+
+    font-size: 0.75rem;
+    line-height: 1.55;
+}
+
+
+.resources-content {
+    padding: 1rem 1rem 1rem 1.8rem;
+}
+
+.resources-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.resources-content li {
+    margin-bottom: 0.45rem;
+
+    font-size: 0.75rem;
+}
+
+.resources-content a {
+    color: #0645ad;
+}
+
+.resources-content a:hover,
+.resources-content a:focus {
+    color: #8b3a00;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    width: 90%;
+    max-width: 767px;
+
+    margin: 0 auto;
+
+    padding: 0.7rem;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    text-align: center;
+}
+
+footer p {
+    margin: 0.2rem;
+
+    font-size: 0.7rem;
+}
+
+#lastModified {
+    color: #ffff00;
+
+    font-size: 0.65rem;
+}
+
+
+@media screen and (max-width: 650px) {
+
+    #course-title {
+        font-size: 0.9rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about-top {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image {
+        margin: 0 auto;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    .flag-area {
+        margin: 0 auto;
+    }
+}
