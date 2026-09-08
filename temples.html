@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temple Album</title>
+
+    <meta name="description"
+        content="A responsive temple album featuring temples from around the world. Created by Eze Oluebube for WDD 131.">
+
+    <meta name="author" content="Eze Oluebube">
+
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+
+            <a class="site-title" href="temples.html">Temple Album</a>
+
+            <button id="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navigation">
+                ☰
+            </button>
+
+            <nav id="navigation">
+                <a href="temples.html">Home</a>
+                <a href="#old">Old</a>
+                <a href="#new">New</a>
+                <a href="#large">Large</a>
+                <a href="#small">Small</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <h1>Temple Album</h1>
+
+        <section class="temple-grid" aria-label="Temple collection">
+
+            <figure id="old">
+                <img
+                    src="images/accra-ghana-temple.jpg"
+                    alt="Accra Ghana Temple"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+                <figcaption>
+                    <h2>Accra Ghana Temple</h2>
+                    <p>Accra, Ghana</p>
+                </figcaption>
+            </figure>
+
+            <figure id="new">
+                <img
+                    src="images/abidjan-ivory-coast-temple.jpg"
+                    alt="Abidjan Ivory Coast Temple"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+                <figcaption>
+                    <h2>Abidjan Ivory Coast Temple</h2>
+                    <p>Abidjan, Côte d'Ivoire</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/aba-nigeria-temple.jpg"
+                    alt="Aba Nigeria Temple"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+                <figcaption>
+                    <h2>Aba Nigeria Temple</h2>
+                    <p>Aba, Nigeria</p>
+                </figcaption>
+            </figure>
+
+            <figure id="large">
+                <img
+                    src="images/salt-lake-temple.jpg"
+                    alt="Salt Lake Temple"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+                <figcaption>
+                    <h2>Salt Lake Temple</h2>
+                    <p>Salt Lake City, Utah</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/washington-dc-temple.jpg"
+                    alt="Washington D.C. Temple"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+                <figcaption>
+                    <h2>Washington D.C. Temple</h2>
+                    <p>Kensington, Maryland</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/rome-italy-temple.jpg"
+                    alt="Rome Italy Temple"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+                <figcaption>
+                    <h2>Rome Italy Temple</h2>
+                    <p>Rome, Italy</p>
+                </figcaption>
+            </figure>
+
+            <figure id="small">
+                <img
+                    src="images/paris-france-temple.jpg"
+                    alt="Paris France Temple"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+                <figcaption>
+                    <h2>Paris France Temple</h2>
+                    <p>Le Chesnay-Rocquencourt, France</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/johannesburg-south-africa-temple.jpg"
+                    alt="Johannesburg South Africa Temple"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+                <figcaption>
+                    <h2>Johannesburg South Africa Temple</h2>
+                    <p>Johannesburg, South Africa</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/london-england-temple.jpg"
+                    alt="London England Temple"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+                <figcaption>
+                    <h2>London England Temple</h2>
+                    <p>London, England</p>
+                </figcaption>
+            </figure>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy; <span id="currentyear"></span>
+            Eze Oluebube ❖ Nigeria
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+
+</html>
