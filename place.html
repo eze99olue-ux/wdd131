@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<meta
+    name="description"
+    content="A responsive WDD 131 country page about Madagascar, including country facts and weather information."
+>
+
+<meta name="author" content="Oluebube Miracle">
+
+<title>Madagascar | WDD 131</title>
+
+<link rel="stylesheet" href="styles/place.css">
+<script src="scripts/place.js" defer></script>
+```
+
+</head>
+
+<body>
+
+```
+<header>
+    <h1>Madagascar</h1>
+</header>
+
+<main>
+
+    <section class="hero" aria-label="Madagascar landscape and wildlife">
+
+        <picture>
+            <source
+                media="(min-width: 700px)"
+                srcset="
+                    https://images.unsplash.com/photo-1749585071957-5995fea323b2?auto=format&fit=crop&fm=webp&q=85&w=1000 1000w,
+                    https://images.unsplash.com/photo-1749585071957-5995fea323b2?auto=format&fit=crop&fm=webp&q=85&w=1600 1600w
+                "
+                sizes="100vw"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1749585071957-5995fea323b2?auto=format&fit=crop&fm=webp&q=85&w=700"
+                srcset="
+                    https://images.unsplash.com/photo-1749585071957-5995fea323b2?auto=format&fit=crop&fm=webp&q=85&w=400 400w,
+                    https://images.unsplash.com/photo-1749585071957-5995fea323b2?auto=format&fit=crop&fm=webp&q=85&w=700 700w
+                "
+                sizes="100vw"
+                alt="Lemur sitting on a tree in Madagascar"
+                width="1600"
+                height="1067"
+            >
+        </picture>
+
+        <section
+            class="info-card data-card"
+            aria-labelledby="data-heading"
+        >
+            <h2 id="data-heading">Data</h2>
+
+            <dl>
+                <div>
+                    <dt>Area:</dt>
+                    <dd>587,041 sq km</dd>
+                </div>
+
+                <div>
+                    <dt>Population:</dt>
+                    <dd>27,691,018</dd>
+                </div>
+
+                <div>
+                    <dt>Capital:</dt>
+                    <dd>Antananarivo</dd>
+                </div>
+
+                <div>
+                    <dt>Languages:</dt>
+                    <dd>Malagasy, French</dd>
+                </div>
+
+                <div>
+                    <dt>Currency:</dt>
+                    <dd>Malagasy Ariary</dd>
+                </div>
+
+                <div>
+                    <dt>Time Zone:</dt>
+                    <dd>UTC+3</dd>
+                </div>
+
+                <div>
+                    <dt>Calling Code:</dt>
+                    <dd>+261</dd>
+                </div>
+
+                <div>
+                    <dt>Internet TLD:</dt>
+                    <dd>.mg</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section
+            class="info-card weather-card"
+            aria-labelledby="weather-heading"
+        >
+            <h2 id="weather-heading">Weather</h2>
+
+            <img
+                class="weather-icon"
+                src="images/weather.svg"
+                alt="Partly cloudy weather"
+            >
+
+            <dl>
+                <div>
+                    <dt>Temperature:</dt>
+                    <dd>
+                        <span id="temperature">10</span> °C
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>Conditions:</dt>
+                    <dd>Partly Cloudy</dd>
+                </div>
+
+                <div>
+                    <dt>Wind:</dt>
+                    <dd>
+                        <span id="wind-speed">5</span> km/h
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>Wind Chill:</dt>
+                    <dd id="wind-chill">N/A</dd>
+                </div>
+            </dl>
+        </section>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        © <span id="currentyear"></span>
+         Oluebube Miracle - Madagascar
+    </p>
+
+    <p>
+        Last Modification:
+        <span id="lastmodified"></span>
+    </p>
+</footer>
+```
+
+</body>
+</html>
