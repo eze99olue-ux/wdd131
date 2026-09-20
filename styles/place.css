@@ -1,255 +1,177 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap');
-
-/* =========================
-GLOBAL VARIABLES
-========================= */
-
 :root {
---primary: #d90429;
---primary-dark: #a90321;
---secondary: #00843d;
---accent: #f4c542;
-
-```
---light: #ffffff;
---text: #222222;
-
---card-bg: rgba(255, 255, 255, 0.9);
-
---shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
-```
-
+    --primary: #d90429;
+    --primary-dark: #a90321;
+    --secondary: #00843d;
+    --accent: #f4c542;
+    --light: #ffffff;
+    --text: #222222;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
 }
-
-/* =========================
-UNIVERSAL STYLES
-========================= */
 
 * {
-  box-sizing: border-box;
-  }
-
-/* =========================
-BODY
-========================= */
-
-body {
-margin: 0;
-font-family: 'Nunito Sans', Arial, sans-serif;
-color: var(--text);
-background: #f5f5f5;
+    box-sizing: border-box;
 }
 
-/* =========================
-HEADER
-========================= */
+body {
+    margin: 0;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    color: var(--text);
+    background: #f5f5f5;
+}
 
 header {
-background: var(--primary);
-border-bottom: 0.7rem solid var(--secondary);
-text-align: center;
-padding: 1rem;
+    background: var(--primary);
+    border-bottom: 0.7rem solid var(--secondary);
+    text-align: center;
+    padding: 1rem;
 }
 
 h1 {
-color: var(--light);
-font-size: clamp(2rem, 7vw, 3.5rem);
-margin: 0;
-font-weight: 800;
+    color: var(--light);
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    margin: 0;
+    font-weight: 800;
 }
-
-/* =========================
-MAIN
-========================= */
 
 main {
-max-width: 1200px;
-margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* =========================
-HERO
-========================= */
-
 .hero {
-position: relative;
-background: var(--light);
+    position: relative;
+    background: var(--light);
 }
 
 .hero picture,
 .hero picture img {
-display: block;
-width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .hero picture img {
-height: 28rem;
-object-fit: cover;
-}
-
-/* =========================
-INFORMATION CARDS
-========================= */
-
-.info-card {
-padding: 1rem 1.25rem 1.5rem;
-background: var(--light);
-}
-
-.info-card h2 {
-margin: 0 auto 1.25rem;
-font-size: 1.7rem;
-text-align: center;
-}
-
-.info-card dl {
-margin: 0 auto;
-max-width: 24rem;
-}
-
-.info-card dl > div {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 0.5rem;
-margin: 0.35rem 0;
-}
-
-.info-card dt {
-text-align: right;
-font-weight: 700;
-}
-
-.info-card dd {
-margin: 0;
-}
-
-/* =========================
-DATA CARD
-========================= */
-
-.data-card {
-border-top: 0.25rem solid var(--secondary);
-}
-
-/* =========================
-WEATHER CARD
-========================= */
-
-.weather-card {
-border-top: 0.25rem solid var(--primary);
-}
-
-/* =========================
-MOBILE WEATHER ICON
-========================= */
-
-.weather-icon {
-display: block;
-width: 4.25rem;
-height: 4.25rem;
-margin: 0 auto 1rem;
-}
-
-/* =========================
-FOOTER
-========================= */
-
-footer {
-background: var(--primary);
-color: var(--light);
-text-align: center;
-padding: 1rem;
-font-size: 0.9rem;
-}
-
-footer p {
-margin: 0.35rem 0;
-}
-
-/* =================================================
-LARGE SCREEN
-================================================= */
-
-@media screen and (min-width: 700px) {
-
-```
-/* HEADER */
-
-header {
-    padding: 1.4rem;
-}
-
-/* HERO IMAGE */
-
-.hero picture img {
-    height: clamp(30rem, 60vw, 36rem);
+    height: 28rem;
     object-fit: cover;
 }
 
-/* INFORMATION CARDS */
-
 .info-card {
-    position: absolute;
-    width: 17rem;
-    padding: 0 1rem 1rem;
-    background: var(--card-bg);
-    box-shadow: var(--shadow);
-    border-top: none;
+    padding: 1rem 1.25rem 1.5rem;
+    background: var(--light);
 }
-
-/* CARD HEADINGS */
 
 .info-card h2 {
-    color: var(--light);
-    background: var(--secondary);
-    text-align: left;
-    margin: 0 -1rem 1rem;
-    padding: 0.55rem 1rem;
-    font-size: 1.5rem;
+    margin: 0 auto 1.25rem;
+    font-size: 1.7rem;
+    text-align: center;
 }
 
-/* DATA POSITION */
-
-.data-card {
-    top: 2rem;
-    left: 1rem;
+.info-card dl {
+    margin: 0 auto;
+    max-width: 24rem;
 }
-
-/* WEATHER POSITION */
-
-.weather-card {
-    right: 1rem;
-    bottom: 2rem;
-    border-top: none;
-}
-
-/* REQUIRED PSEUDO-ELEMENT */
-
-.weather-card h2::after {
-    content: '⛅';
-    float: right;
-    font-size: 1.35rem;
-    margin-left: 0.5rem;
-}
-
-/* HIDE MOBILE SVG ON LARGE SCREEN */
-
-.weather-icon {
-    display: none;
-}
-
-/* INFORMATION TEXT */
 
 .info-card dl > div {
-    grid-template-columns: 1fr 1.2fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin: 0.35rem 0;
+}
+
+.info-card dt {
+    text-align: right;
+    font-weight: 700;
+}
+
+.info-card dd {
+    margin: 0;
+}
+
+.data-card {
+    border-top: 0.25rem solid var(--secondary);
+}
+
+.weather-card {
+    border-top: 0.25rem solid var(--primary);
+}
+
+.weather-icon {
+    display: block;
+    width: 4.25rem;
+    height: 4.25rem;
+    margin: 0 auto 1rem;
+}
+
+footer {
+    background: var(--primary);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem;
     font-size: 0.9rem;
 }
 
-/* FOOTER */
-
-footer {
-    padding: 1.5rem;
+footer p {
+    margin: 0.35rem 0;
 }
-```
 
+@media screen and (min-width: 700px) {
+
+    header {
+        padding: 1.4rem;
+    }
+
+    .hero picture img {
+        height: min(60vw, 36rem);
+        min-height: 30rem;
+        object-fit: cover;
+    }
+
+    .info-card {
+        position: absolute;
+        width: 17rem;
+        padding: 0 1rem 1rem;
+        background: var(--card-bg);
+        box-shadow: var(--shadow);
+        border-top: none;
+    }
+
+    .info-card h2 {
+        color: var(--light);
+        background: var(--secondary);
+        text-align: left;
+        margin: 0 -1rem 1rem;
+        padding: 0.55rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .data-card {
+        top: 2rem;
+        left: 1rem;
+    }
+
+    .weather-card {
+        right: 1rem;
+        bottom: 2rem;
+        border-top: none;
+    }
+
+    .weather-card h2::after {
+        content: "⛅";
+        float: right;
+        font-size: 1.35rem;
+        margin-left: 0.5rem;
+    }
+
+    .weather-icon {
+        display: none;
+    }
+
+    .info-card dl > div {
+        grid-template-columns: 1fr 1.2fr;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 1.5rem;
+    }
 }
