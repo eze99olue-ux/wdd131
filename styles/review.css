@@ -1,0 +1,174 @@
+:root {
+  --primary: #4a0e4e;
+  --primary-dark: #350a38;
+  --accent: #f4b942;
+  --background: #f5f1f5;
+  --surface: #ffffff;
+  --text: #202020;
+  --muted: #4f4a50;
+  --border: #aaa3ad;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  width: min(92%, 650px);
+  margin: 2rem auto;
+}
+
+.confirmation-card {
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 10px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.success-icon {
+  display: grid;
+  place-items: center;
+
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 1rem;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+  color: #202020;
+
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  color: var(--primary);
+  margin: 0;
+}
+
+.lead {
+  color: var(--muted);
+}
+
+.review-summary {
+  padding: 1rem;
+
+  background: #fafafa;
+
+  border: 1px solid var(--border);
+
+  border-radius: 7px;
+
+  text-align: left;
+}
+
+.review-summary h2 {
+  margin-top: 0;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.review-summary p {
+  margin: 0.6rem 0;
+  overflow-wrap: anywhere;
+}
+
+.counter {
+  margin: 1.5rem 0;
+  padding: 1rem;
+
+  background: var(--primary);
+  color: white;
+
+  border-radius: 7px;
+}
+
+.counter p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.counter span {
+  display: block;
+  margin-top: 0.25rem;
+
+  color: var(--accent);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.back-button {
+  display: inline-block;
+
+  padding: 0.8rem 1.2rem;
+
+  background: var(--primary);
+  color: white;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.back-button:hover {
+  background: var(--primary-dark);
+}
+
+.back-button:focus {
+  outline: 3px solid #005fcc;
+  outline-offset: 3px;
+}
+
+footer {
+  width: min(92%, 650px);
+  margin: 1rem auto 2rem;
+
+  padding: 1rem;
+
+  background: var(--primary);
+  color: white;
+
+  text-align: center;
+
+  border-radius: 8px;
+
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0.25rem;
+}
+
+@media (min-width: 700px) {
+
+  .container {
+    margin-top: 4rem;
+  }
+
+  .confirmation-card {
+    padding: 2.5rem;
+  }
+
+}

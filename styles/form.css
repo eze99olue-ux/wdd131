@@ -1,0 +1,220 @@
+:root {
+  --primary: #4a0e4e;
+  --primary-dark: #350a38;
+  --accent: #f4b942;
+  --background: #f5f1f5;
+  --surface: #ffffff;
+  --text: #202020;
+  --muted: #4f4a50;
+  --border: #aaa3ad;
+  --focus: #005fcc;
+  --required: #8b0000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  width: min(92%, 650px);
+  margin: 2rem auto;
+}
+
+.page-header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
+.review-form {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.3rem;
+}
+
+label,
+legend {
+  font-weight: 700;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.45rem;
+}
+
+.required {
+  color: var(--required);
+  font-weight: 700;
+}
+
+.optional {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font: inherit;
+  background: white;
+  color: var(--text);
+}
+
+select {
+  min-height: 44px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+.rating-options {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.rating-options label {
+  position: relative;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.rating-options input {
+  position: absolute;
+  opacity: 0;
+}
+
+.star {
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+  color: #333333;
+}
+
+.rating-options label:hover .star,
+.rating-options label:has(input:checked) .star {
+  color: var(--accent);
+}
+
+.rating-options label:has(input:focus-visible) {
+  outline: 3px solid var(--focus);
+}
+
+.features {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.features legend {
+  padding: 0 0.25rem;
+}
+
+.instructions {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.features label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.6rem 0;
+  font-weight: 400;
+}
+
+.features input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid rgba(0, 95, 204, 0.3);
+  outline-offset: 2px;
+  border-color: var(--focus);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: var(--primary-dark);
+}
+
+footer {
+  width: min(92%, 650px);
+  margin: 1rem auto 2rem;
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0.25rem;
+}
+
+@media (min-width: 700px) {
+
+  .container {
+    margin-top: 3rem;
+  }
+
+  .review-form {
+    padding: 2rem;
+  }
+
+}

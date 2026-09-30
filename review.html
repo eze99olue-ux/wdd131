@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Product review confirmation page for WDD 131."
+  >
+
+  <meta
+    name="author"
+    content="Eze Oluebube"
+  >
+
+  <title>Review Submitted | WDD 131</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="styles/review.css"
+  >
+
+  <script
+    src="scripts/review.js"
+    defer
+  ></script>
+
+</head>
+
+<body>
+
+  <main class="container">
+
+    <section class="confirmation-card">
+
+      <div
+        class="success-icon"
+        aria-hidden="true"
+      >
+        ✓
+      </div>
+
+      <h1>
+        Review Submitted!
+      </h1>
+
+      <p class="lead">
+        Thank you for sharing your experience.
+      </p>
+
+
+      <div class="review-summary">
+
+        <h2>Review Details</h2>
+
+        <p>
+          <strong>Product:</strong>
+          <span id="productResult"></span>
+        </p>
+
+        <p>
+          <strong>Rating:</strong>
+          <span id="ratingResult"></span>
+        </p>
+
+        <p>
+          <strong>Installation Date:</strong>
+          <span id="dateResult"></span>
+        </p>
+
+        <p>
+          <strong>Useful Features:</strong>
+          <span id="featuresResult"></span>
+        </p>
+
+        <p>
+          <strong>Written Review:</strong>
+          <span id="reviewResult"></span>
+        </p>
+
+        <p>
+          <strong>Name:</strong>
+          <span id="nameResult"></span>
+        </p>
+
+      </div>
+
+
+      <div class="counter">
+
+        <p>
+          Total Reviews Completed
+        </p>
+
+        <span id="reviewCount">
+          0
+        </span>
+
+      </div>
+
+
+      <a
+        href="form.html"
+        class="back-button"
+      >
+        Submit Another Review
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      &copy; <span id="currentYear"></span>
+      Eze Oluebube
+    </p>
+
+    <p>
+      WDD 131 &bull; Product Review Form
+    </p>
+
+    <p>
+      Last Modification:
+      <span id="lastModified"></span>
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
