@@ -1,0 +1,1054 @@
+:root {
+    --green: #087443;
+    --dark-green: #04552f;
+    --gold: #f4b942;
+    --dark: #17251f;
+    --text: #34443c;
+    --muted: #6a7971;
+    --light: #f3f7f4;
+    --cream: #fffaf0;
+    --white: #ffffff;
+    --border: #d8e2dc;
+    --shadow: 0 12px 35px rgba(23, 37, 31, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background: var(--white);
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 7vw, 5.2rem);
+    line-height: 1.05;
+}
+
+h2 {
+    color: var(--dark);
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+
+h3 {
+    color: var(--dark);
+}
+
+a {
+    color: var(--green);
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0.9rem 5%;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--green);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.logo-mark {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    color: var(--white);
+    background: var(--green);
+    border-radius: 50%;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.site-nav a {
+    padding: 0.55rem 0.9rem;
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0.4rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus,
+.site-nav a.active {
+    color: var(--green);
+    background: #edf7f1;
+}
+
+.menu-button {
+    display: none;
+    padding: 0.2rem 0.5rem;
+    color: var(--dark);
+    background: transparent;
+    border: 0;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.hero {
+    position: relative;
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: var(--white);
+    background: var(--dark);
+}
+
+.hero > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 45, 26, 0.94) 0%,
+            rgba(4, 45, 26, 0.7) 45%,
+            rgba(4, 45, 26, 0.15) 100%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    max-width: 850px;
+    margin-bottom: 1.3rem;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 650px;
+    margin-bottom: 2rem;
+    font-size: 1.15rem;
+}
+
+.eyebrow {
+    margin-bottom: 0.6rem;
+    color: var(--green);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.hero .eyebrow,
+.page-banner .eyebrow {
+    color: var(--gold);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.35rem;
+    color: var(--white);
+    background: var(--green);
+    border: 2px solid var(--green);
+    border-radius: 0.45rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.button:hover,
+.button:focus {
+    color: var(--white);
+    background: var(--dark-green);
+    border-color: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+.button-outline {
+    color: var(--white);
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.button-outline:hover,
+.button-outline:focus {
+    color: var(--dark);
+    background: var(--white);
+    border-color: var(--white);
+}
+
+.hero-stat {
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.6rem;
+    backdrop-filter: blur(8px);
+}
+
+.hero-stat strong {
+    color: var(--gold);
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+}
+
+.hero-stat span {
+    font-size: 0.8rem;
+}
+
+.section {
+    width: min(1150px, 90%);
+    margin: 0 auto;
+    padding: 5.5rem 0;
+}
+
+.section-heading {
+    margin-bottom: 2.5rem;
+}
+
+.centered {
+    text-align: center;
+}
+
+.welcome-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.welcome-text {
+    font-size: 1.05rem;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 0.7rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.fact-box {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    background: var(--cream);
+    border-left: 5px solid var(--gold);
+    border-radius: 0.6rem;
+    box-shadow: var(--shadow);
+}
+
+.fact-icon {
+    color: var(--green);
+    font-size: 2rem;
+}
+
+.fact-box strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--green);
+    font-family: "Montserrat", sans-serif;
+}
+
+.destination-showcase {
+    width: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+    background: var(--light);
+}
+
+.destination-showcase > .section-heading,
+.destination-showcase > .featured-grid,
+.destination-showcase > .section-action {
+    width: min(1150px, 100%);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    grid-template-rows: 260px 260px;
+    gap: 1.2rem;
+}
+
+.featured-destination {
+    position: relative;
+    overflow: hidden;
+    min-height: 260px;
+    border-radius: 0.8rem;
+    box-shadow: var(--shadow);
+}
+
+.featured-destination:first-child {
+    grid-row: 1 / 3;
+}
+
+.featured-destination img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-destination:hover img {
+    transform: scale(1.06);
+}
+
+.featured-destination::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 30%,
+        rgba(0, 0, 0, 0.82) 100%
+    );
+}
+
+.featured-overlay {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.3rem;
+    left: 1.5rem;
+    z-index: 1;
+    color: var(--white);
+}
+
+.featured-overlay span {
+    color: var(--gold);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.featured-overlay h3 {
+    margin: 0.2rem 0;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.featured-overlay p {
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+.section-action {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.food-showcase {
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.food-intro {
+    max-width: 420px;
+}
+
+.food-image-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: 190px 190px;
+    gap: 1rem;
+}
+
+.food-image {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 0.7rem;
+    box-shadow: var(--shadow);
+}
+
+.food-image:first-child {
+    grid-row: 1 / 3;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.food-image:hover img {
+    transform: scale(1.05);
+}
+
+.food-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 45%, rgba(0, 0, 0, 0.75));
+}
+
+.food-image figcaption {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 1;
+    color: var(--white);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.cta-section {
+    padding: 6rem 5%;
+    color: var(--white);
+    text-align: center;
+    background:
+        linear-gradient(rgba(4, 82, 45, 0.93), rgba(4, 82, 45, 0.93)),
+        url("../images/nigeria_hero.webp") center / cover;
+}
+
+.cta-content {
+    width: min(750px, 100%);
+    margin: auto;
+}
+
+.cta-section h2 {
+    color: var(--white);
+}
+
+.cta-section .button {
+    margin-top: 1rem;
+    color: var(--dark);
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
+.cta-section .button:hover {
+    background: #ffd36b;
+    border-color: #ffd36b;
+}
+
+.page-banner {
+    display: grid;
+    min-height: 42vh;
+    padding: 4rem 5%;
+    place-items: center;
+    color: var(--white);
+    text-align: center;
+    background:
+        linear-gradient(rgba(4, 65, 36, 0.9), rgba(4, 65, 36, 0.9)),
+        url("../images/nigeria_hero.webp") center / cover;
+}
+
+.page-banner > div {
+    max-width: 800px;
+}
+
+.page-banner h1 {
+    margin-bottom: 1rem;
+}
+
+.destination-section {
+    min-height: 500px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-button {
+    padding: 0.65rem 1.1rem;
+    color: var(--dark);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus,
+.filter-button.active-filter {
+    color: var(--white);
+    background: var(--green);
+    border-color: var(--green);
+}
+
+.status-message,
+.success-message {
+    min-height: 1.6rem;
+    color: var(--green);
+    font-weight: 600;
+    text-align: center;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.destination-card {
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(23, 37, 31, 0.17);
+}
+
+.destination-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.destination-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.destination-card:hover .destination-image img {
+    transform: scale(1.05);
+}
+
+.destination-type {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.35rem 0.7rem;
+    color: var(--dark);
+    background: var(--gold);
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.destination-content {
+    padding: 1.4rem;
+}
+
+.destination-location {
+    margin-bottom: 0.3rem;
+    color: var(--green);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.destination-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.favorite-button {
+    padding: 0.55rem 0.9rem;
+    color: var(--green);
+    background: var(--white);
+    border: 1px solid var(--green);
+    border-radius: 0.4rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.favorite-button:hover,
+.favorite-button.active-favorite {
+    color: var(--white);
+    background: var(--green);
+}
+
+.destination-tip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 4rem 8%;
+    background: var(--cream);
+}
+
+.destination-tip > div {
+    max-width: 750px;
+}
+
+.destination-tip h2 {
+    margin-bottom: 0.8rem;
+}
+
+.culture-banner {
+    background:
+        linear-gradient(rgba(4, 65, 36, 0.9), rgba(4, 65, 36, 0.9)),
+        url("../images/jollof_rice.webp") center / cover;
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.culture-card {
+    padding: 2rem 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 0.7rem;
+    box-shadow: 0 8px 25px rgba(23, 37, 31, 0.07);
+}
+
+.culture-card:hover {
+    border-color: var(--green);
+}
+
+.culture-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    place-items: center;
+    color: var(--white);
+    background: var(--green);
+    border-radius: 50%;
+    font-size: 1.4rem;
+}
+
+.food-gallery {
+    width: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+    background: var(--light);
+}
+
+.food-gallery > .section-heading,
+.food-gallery > .food-cards {
+    width: min(1150px, 100%);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.food-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.food-card-image {
+    overflow: hidden;
+    background: var(--white);
+    border-radius: 0.8rem;
+    box-shadow: var(--shadow);
+}
+
+.food-card-image > img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.food-card-image:hover > img {
+    transform: scale(1.04);
+}
+
+.food-card-content {
+    padding: 1.5rem;
+}
+
+.food-card-content > span {
+    color: var(--gold);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.food-card-content h3 {
+    margin: 0.2rem 0 0.5rem;
+}
+
+.culture-quote {
+    padding: 5rem 8%;
+    color: var(--white);
+    background: var(--green);
+}
+
+.culture-quote > div {
+    width: min(900px, 100%);
+    margin: auto;
+    text-align: center;
+}
+
+.culture-quote h2 {
+    color: var(--white);
+}
+
+.quote-mark {
+    margin-bottom: 0;
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 5rem;
+    line-height: 0.7;
+}
+
+.planner-section {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.planner-intro {
+    position: sticky;
+    top: 110px;
+}
+
+.planner-highlights {
+    display: grid;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.planner-highlights div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--light);
+    border-radius: 0.5rem;
+}
+
+.planner-highlights strong {
+    color: var(--green);
+    font-family: "Montserrat", sans-serif;
+}
+
+.travel-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    padding: 2rem;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    color: var(--text);
+    background: var(--white);
+    border: 1px solid #bfcac4;
+    border-radius: 0.4rem;
+    font: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 3px solid rgba(244, 185, 66, 0.35);
+    border-color: var(--green);
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-button {
+    width: fit-content;
+}
+
+.saved-plan {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+}
+
+.saved-plan-box {
+    min-height: 100px;
+    padding: 1.5rem;
+    background: #edf7f1;
+    border-left: 5px solid var(--green);
+    border-radius: 0.5rem;
+}
+
+.saved-plan-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.saved-plan-item:last-child {
+    border-bottom: 0;
+}
+
+.saved-plan-item strong {
+    color: var(--green);
+}
+
+.site-footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+    padding: 3.5rem 5% 1.5rem;
+    color: #dfe9e3;
+    background: var(--dark);
+}
+
+.footer-logo {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.site-footer h3 {
+    color: var(--gold);
+    font-size: 1rem;
+}
+
+.site-footer > div:not(.footer-bottom) a {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #dfe9e3;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 850px) {
+    .menu-button {
+        display: block;
+    }
+
+    .site-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem 5%;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .site-nav.open {
+        display: flex;
+    }
+
+    .site-nav a {
+        padding: 0.8rem;
+    }
+
+    .welcome-grid,
+    .food-showcase,
+    .planner-section {
+        grid-template-columns: 1fr;
+    }
+
+    .planner-intro {
+        position: static;
+    }
+
+    .destination-grid,
+    .food-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .culture-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .food-showcase {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 0.8rem 4%;
+    }
+
+    .hero {
+        min-height: 78vh;
+    }
+
+    .hero-content {
+        width: 92%;
+    }
+
+    .hero-stat {
+        display: none;
+    }
+
+    .section {
+        width: 92%;
+        padding: 4rem 0;
+    }
+
+    .destination-showcase,
+    .food-gallery {
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+
+    .featured-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 220px);
+    }
+
+    .featured-destination:first-child {
+        grid-row: auto;
+    }
+
+    .food-image-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px 180px 180px;
+    }
+
+    .food-image:first-child {
+        grid-row: auto;
+    }
+
+    .destination-grid,
+    .food-cards,
+    .culture-grid,
+    .travel-form {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .destination-tip {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 3rem 5%;
+    }
+
+    .travel-form {
+        padding: 1.3rem;
+    }
+
+    .saved-plan-item {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr;
+        padding: 3rem 5% 1.5rem;
+    }
+
+    .footer-bottom {
+        grid-column: auto;
+        flex-direction: column;
+    }
+
+    .page-banner {
+        min-height: 38vh;
+    }
+
+    .filter-buttons {
+        justify-content: flex-start;
+    }
+}

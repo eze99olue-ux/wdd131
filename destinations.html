@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore beautiful Nigerian destinations including Abuja, Lagos, Calabar, and natural attractions.">
+    <meta name="author" content="Oluebube Eze">
+    <title>Discover Nigeria | Destinations</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">
+            <span class="logo-mark">N</span>
+            <span>Discover Nigeria</span>
+        </a>
+
+        <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a class="active" href="destinations.html">Destinations</a>
+            <a href="culture.html">Culture & Food</a>
+            <a href="contact.html">Plan a Visit</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div>
+                <p class="eyebrow">Explore Nigeria</p>
+                <h1>Places worth discovering</h1>
+                <p>
+                    From busy cities to peaceful natural attractions,
+                    find a destination that interests you.
+                </p>
+            </div>
+        </section>
+
+        <section class="section destination-section">
+            <div class="section-heading centered">
+                <p class="eyebrow">Choose Your Experience</p>
+                <h2>Explore Destinations</h2>
+                <p>Filter the destinations according to your interests.</p>
+            </div>
+
+            <div class="filter-buttons" aria-label="Destination filters">
+                <button class="filter-button active-filter" data-filter="All" type="button">
+                    All
+                </button>
+
+                <button class="filter-button" data-filter="City" type="button">
+                    Cities
+                </button>
+
+                <button class="filter-button" data-filter="Nature" type="button">
+                    Nature
+                </button>
+
+                <button class="filter-button" data-filter="Culture" type="button">
+                    Culture
+                </button>
+            </div>
+
+            <p id="favorite-message" class="status-message" aria-live="polite"></p>
+
+            <div id="destination-list" class="destination-grid"></div>
+        </section>
+
+        <section class="destination-tip">
+            <div>
+                <p class="eyebrow">Travel Tip</p>
+                <h2>Explore beyond the familiar</h2>
+                <p>
+                    Every region of Nigeria offers something different.
+                    Take time to learn about the people, food, history,
+                    and environment of each destination.
+                </p>
+            </div>
+
+            <a class="button" href="contact.html">Create a Travel Plan</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <a class="logo footer-logo" href="index.html">
+                <span class="logo-mark">N</span>
+                <span>Discover Nigeria</span>
+            </a>
+            <p>Explore the places, people, culture, and food of Nigeria.</p>
+        </div>
+
+        <div>
+            <h3>Explore</h3>
+            <a href="destinations.html">Destinations</a>
+            <a href="culture.html">Culture & Food</a>
+            <a href="contact.html">Plan a Visit</a>
+        </div>
+
+        <div>
+            <h3>Project</h3>
+            <a href="references.html">References</a>
+            <p>WDD 131 Final Project</p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Oluebube Eze</p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+</body>
+</html>

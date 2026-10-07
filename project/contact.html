@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create a simple travel plan for exploring Nigeria.">
+    <meta name="author" content="Oluebube Eze">
+    <title>Discover Nigeria | Plan a Visit</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">
+            <span class="logo-mark">N</span>
+            <span>Discover Nigeria</span>
+        </a>
+
+        <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="culture.html">Culture & Food</a>
+            <a class="active" href="contact.html">Plan a Visit</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div>
+                <p class="eyebrow">Your Next Adventure</p>
+                <h1>Plan a Visit</h1>
+                <p>
+                    Choose your interests and create a simple travel plan.
+                </p>
+            </div>
+        </section>
+
+        <section class="section planner-section">
+            <div class="planner-intro">
+                <p class="eyebrow">Travel Planner</p>
+                <h2>Start planning your Nigerian adventure.</h2>
+                <p>
+                    Use the form to save a simple travel idea. Your information
+                    is stored locally in your browser for this project.
+                </p>
+
+                <div class="planner-highlights">
+                    <div>
+                        <strong>01</strong>
+                        <span>Choose a destination</span>
+                    </div>
+                    <div>
+                        <strong>02</strong>
+                        <span>Select an interest</span>
+                    </div>
+                    <div>
+                        <strong>03</strong>
+                        <span>Save your plan</span>
+                    </div>
+                </div>
+            </div>
+
+            <form id="travel-form" class="travel-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="text" required autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type="email" required autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Preferred Destination</label>
+                    <select id="destination" name="destination" required>
+                        <option value="">Select a destination</option>
+                        <option value="Abuja">Abuja</option>
+                        <option value="Lagos">Lagos</option>
+                        <option value="Calabar">Calabar</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="interest">Main Interest</label>
+                    <select id="interest" name="interest" required>
+                        <option value="">Select an interest</option>
+                        <option value="Nature">Nature</option>
+                        <option value="Culture">Culture</option>
+                        <option value="Food">Food</option>
+                        <option value="City exploration">City exploration</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message">Travel Ideas</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="What would you like to experience?"
+                    ></textarea>
+                </div>
+
+                <button class="button form-button" type="submit">
+                    Save My Travel Plan
+                </button>
+            </form>
+
+            <p id="form-message" class="success-message" aria-live="polite"></p>
+
+            <section class="saved-plan">
+                <div class="section-heading">
+                    <p class="eyebrow">Your Saved Information</p>
+                    <h2>Saved Travel Plan</h2>
+                </div>
+
+                <div id="saved-plan-content" class="saved-plan-box"></div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <a class="logo footer-logo" href="index.html">
+                <span class="logo-mark">N</span>
+                <span>Discover Nigeria</span>
+            </a>
+            <p>Explore the places, people, culture, and food of Nigeria.</p>
+        </div>
+
+        <div>
+            <h3>Explore</h3>
+            <a href="destinations.html">Destinations</a>
+            <a href="culture.html">Culture & Food</a>
+            <a href="contact.html">Plan a Visit</a>
+        </div>
+
+        <div>
+            <h3>Project</h3>
+            <a href="references.html">References</a>
+            <p>WDD 131 Final Project</p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Oluebube Eze</p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+</body>
+</html>
